@@ -11,7 +11,7 @@ def load_model():
     return Model
 
 # download model
-# download_model()
+download_model()
 # load model
 model = load_model()
 
