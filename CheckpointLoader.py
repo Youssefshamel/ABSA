@@ -19,10 +19,10 @@ def download_model():
         # download model
         data_science_bucket.download_file(
             'ABSA_checkpoints/ABSA_checkpoint_1.0.zip',
-            'ABSA_checkpoints/ABSA_checkpoint_1.0.zip')
+            'ABSA_checkpoint_1.0.zip')
     # extract file
-    if not os.path.exists("ABSA_checkpoints/fast_lcf_atepc_my_dataset_cdw_apcacc_83.5_apcf1_78.89_atef1_64.24"):
+    if not os.path.exists("fast_lcf_atepc_my_dataset_cdw_apcacc_83.5_apcf1_78.89_atef1_64.24"):
         # loading the temp.zip and creating a zip object
-        with ZipFile("ABSA_checkpoints/ABSA_checkpoint_1.0.zip", 'r') as zObject:
+        with ZipFile("ABSA_checkpoint_1.0.zip", 'r') as zObject:
             zObject.extractall(
-                path="ABSA_checkpoints")
+                path="")
