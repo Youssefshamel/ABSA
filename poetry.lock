@@ -135,6 +135,7 @@ files = [
 [package.dependencies]
 pyabsa = ">=2.0.10"
 
+
 [package.extras]
 full = ["nlpaug", "tensorflow-text", "textattack"]
 
@@ -487,6 +488,23 @@ files = [
     {file = "cymem-2.0.8-cp39-cp39-win_amd64.whl", hash = "sha256:ceeab3ce2a92c7f3b2d90854efb32cb203e78cb24c836a5a9a2cac221930303b"},
     {file = "cymem-2.0.8.tar.gz", hash = "sha256:8fb09d222e21dcf1c7e907dc85cf74501d4cea6c4ed4ac6c9e016f98fb59cbbf"},
 ]
+
+[[package]]
+name = "en_core_web_sm"
+version = "3.7.1"
+description = "English pipeline optimized for CPU. Components: tok2vec, tagger, parser, senter, ner, attribute_ruler, lemmatizer."
+optional = false
+python-versions = "*"
+files = [
+    {file = "en_core_web_sm-3.7.1.tar.gz", hash = "sha256:1075c2aa2bc2fee105ab6e90a01a5d1a428c9f5b20a1fa003dc2cb6a438d295e"},
+]
+
+[package.dependencies]
+spacy = ">=3.7.2,<3.8.0"
+
+[package.source]
+type = "url"
+url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz#egg=en_core_web_sm"
 
 [[package]]
 name = "et-xmlfile"
@@ -3718,4 +3736,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "bd36091d375bc00478f320abd05a11b96174d8899580bab83c685994132f7c9d"
+content-hash = "867d84d8891ecbd1c52237bc173dd5ed86540d88207822e8a6dad9097cbf7c6f"

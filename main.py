@@ -7,7 +7,6 @@ from CheckpointLoader import download_model
 # load model
 @st.cache_resource
 def load_model():
-    os.system("python -m spacy download en_core_web_sm")
     Model = ATEPC.AspectExtractor("fast_lcf_atepc_my_dataset_cdw_apcacc_83.5_apcf1_78.89_atef1_64.24")
     return Model
 
