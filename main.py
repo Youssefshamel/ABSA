@@ -18,10 +18,20 @@ model = load_model()
 # Title
 st.title("Aspect Extraction")
 # get text
-text_input = st.text_input("input text:", help="ex: 'The restaurant had amazing food, but the service wasn't that great.'")
-run = st.button('Predict')
-if run:
-    output = model.predict(text_input)
+option = st.selectbox(
+    "Examples:",
+    ("The restaurant had amazing food, but the service wasn't that great.",
+     "I love going to that place in the evening!",
+     "super crowded area, but the view is worth it!"),
+)
+text_input = st.text_input("Input Text:", "ex: 'The restaurant had amazing food, but the service wasn't that great.'")
+# run = st.button('Predict')
+
+if text_input or option:
+    if option:
+        output = model.predict(option)
+    else:
+        output = model.predict(text_input)
     tokens = output['tokens']
     aspects = output['aspect']
     positions = output['position']
