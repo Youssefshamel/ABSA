@@ -10,6 +10,7 @@ def load_model():
     Model = ATEPC.AspectExtractor("fast_lcf_atepc_my_dataset_cdw_apcacc_83.5_apcf1_78.89_atef1_64.24")
     return Model
 
+
 # download model
 download_model()
 # load model
@@ -18,6 +19,8 @@ model = load_model()
 # Title
 st.title("Aspect Extraction")
 # get text
+option = None
+text_input = None
 custom = st.toggle("custom")
 if not custom:
     option = st.selectbox(
@@ -27,7 +30,8 @@ if not custom:
          "super crowded area, but the view is worth it!"),
     )
 else:
-    text_input = st.text_input("Input Text:", help="ex: 'The restaurant had amazing food, but the service wasn't that great.'")
+    text_input = st.text_input("Input Text:",
+                               help="ex: 'The restaurant had amazing food, but the service wasn't that great.'")
 # run = st.button('Predict')
 
 if text_input or option:
@@ -66,4 +70,3 @@ if text_input or option:
     st.markdown(output_text, unsafe_allow_html=True)
     st.subheader("Output details:")
     st.markdown(output, unsafe_allow_html=True)
-
