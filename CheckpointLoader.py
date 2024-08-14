@@ -6,6 +6,7 @@ from zipfile import ZipFile
 def download_model():
     # Check if model file exists locally, if not, download it
     if not os.path.exists("ABSA_checkpoints/ABSA_checkpoint_1.0.zip"):
+        print("Downloading...")
         # fetch S3 Keys
         ACCESS_KEY_CA=os.environ["ACCESS_KEY_CA"]
         SECRET_KEY_CA=os.environ["SECRET_KEY_CA"]
@@ -22,6 +23,7 @@ def download_model():
             'ABSA_checkpoint_1.0.zip')
     # extract file
     if not os.path.exists("fast_lcf_atepc_my_dataset_cdw_apcacc_83.5_apcf1_78.89_atef1_64.24"):
+        print("extracting...")
         # loading the temp.zip and creating a zip object
         with ZipFile("ABSA_checkpoint_1.0.zip", 'r') as zObject:
             zObject.extractall(
