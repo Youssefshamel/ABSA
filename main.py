@@ -32,9 +32,9 @@ if not custom:
 else:
     text_input = st.text_input("Input Text:",
                                help="ex: 'The restaurant had amazing food, but the service wasn't that great.'")
-# run = st.button('Predict')
+run = st.button('Predict')
 
-if text_input or option:
+if run:
     if not custom:
         output = model.predict(option)
     else:
