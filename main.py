@@ -2,6 +2,7 @@ import streamlit as st
 from pyabsa import AspectTermExtraction as ATEPC
 import os
 from CheckpointLoader import download_model
+from Examples import Examples
 
 
 # load model
@@ -26,9 +27,7 @@ custom = st.toggle("custom")
 if not custom:
     option = st.selectbox(
         "Examples:",
-        ("The restaurant had amazing food, but the service wasn't that great.",
-         "I love going to that place in the evening!",
-         "super crowded area, but the view is worth it!"),
+        Examples,
     )
 else:
     text_input = st.text_input("Input Text:",
