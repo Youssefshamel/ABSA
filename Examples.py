@@ -1,15 +1,25 @@
 
 Examples = ("The restaurant had amazing food, but the service wasn't that great.",
              "I love going to that place in the evening!",
-             "super crowded area, but the view is worth it!",
+             "The area is very crowded, but the view is worth it!",
+            "The Gourmet Garden has a delightful atmosphere and friendly staff, but the steak was overcooked and the vegetables were underseasoned, making for a mixed experience.",
+            "While 'Eclipse of Shadows' features stunning cinematography and a compelling lead actor, the convoluted plot and slow pacing detract from the overall enjoyment.",
+            "'The Lost Chronicles' impresses with strong character development and engaging prose, but the predictable story and rushed resolution make it less impactful.",
+            "The HyperTech smartwatch offers great features and sleek design, yet its poor battery life and sluggish interface hold it back from being exceptional.",
+            "'Fantasy Quest 3' boasts stunning graphics and an immersive world, but its repetitive main storyline and clunky combat system dampen the experience.",
+            "The Oceanview Hotel features beautiful views and spacious rooms with a welcoming staff, though room cleanliness and street noise issues reduce its appeal.",
+            "Zen Flow’s yoga class is well-structured and led by a knowledgeable instructor, but large class sizes and poor temperature control can be problematic.",
+            "Echoing Waves’ album is filled with innovative sounds and strong vocals, but its lack of cohesion and out-of-place tracks affect the overall flow.",
+            "'Advanced Photography Techniques' provides valuable insights and engaging instruction, but outdated materials and technical issues on the platform are frustrating.",
+            "The Vegan Bistro offers creative plant-based dishes and a cozy ambiance, though slow service and some lackluster flavors make it a mixed dining experience.",
 
-            "كتاب رائع وكاتب اروع يروي كيف ان عقولنا كمسلمين محصوره داخل بوتقه صغيره نسجن انفسنا فيها فديننا الحنيف دين موده ورحمه واخلاق وعدل وحريات الا اننا مازلنا نعيش في عصور باليه بعيده كل البعد عن تعاليم ديننا وكيف اننا نختزل الاسلام في المظاهر ونبعد عن جوهر الدين ويرد الكتاب عمن ينكر علي الدين ارتباطه بالسياسه"
-            ,"كتاب مرهق جدا للمشاعر .. لا يسعك إلا أن تتوحد مع بطلة الرواية و تنتحب من أجلها"
+            "كتاب رائع وكاتب اروع يروي كيف ان عقولنا كمسلمين محصوره داخل بوتقه صغيره نسجن انفسنا فيها فديننا الحنيف دين موده ورحمه واخلاق وعدل وحريات الا اننا مازلنا نعيش في عصور باليه بعيده كل البعد عن تعاليم ديننا وكيف اننا نختزل الاسلام في المظاهر ونبعد عن جوهر الدين ويرد الكتاب عمن ينكر علي الدين ارتباطه بالسياسه",
+            "كتاب مرهق جدا للمشاعر .. لا يسعك إلا أن تتوحد مع بطلة الرواية و تنتحب من أجلها",
             "قصة حب مبتورة كهدى المبتورة عن العراق... لغة الكاتبة جميلة ، أحببت اللهجة العراقية المحببة التي تقفز في منتصف الحوارات :",
-            "الجزء الثالث دة وحش جدا وانا حاسس ان متكرو والنهاية زي الزفت مينفعش تدمج الكومدي مع النهيات الماساوية ومينفعش اصلا نهاية ماساوية مع قارئ عربي انا بياع كتب ودي شغلتي القارئ العربي محتاج كومدي او رومنس او رعب بنهاية سعيدة والرواية مش كدا خالص ويكفي اني اقول ان انجح كتاب بنسبة لي هو حكايات فرغلي المستكاوي"
-            ,". كتاب خفيف وجميل يحمل عبارات وجمل تلمس المعنويات وتتحسس عمق القلب. شكرا شهدتي على الإهداء الرقيق"
+            "الجزء الثالث دة وحش جدا وانا حاسس ان متكرو والنهاية زي الزفت مينفعش تدمج الكومدي مع النهيات الماساوية ومينفعش اصلا نهاية ماساوية مع قارئ عربي انا بياع كتب ودي شغلتي القارئ العربي محتاج كومدي او رومنس او رعب بنهاية سعيدة والرواية مش كدا خالص ويكفي اني اقول ان انجح كتاب بنسبة لي هو حكايات فرغلي المستكاوي",
+            ". كتاب خفيف وجميل يحمل عبارات وجمل تلمس المعنويات وتتحسس عمق القلب. شكرا شهدتي على الإهداء الرقيق",
             "رائعة، أفضل ماكتبت بثينة. الرواية مؤلمة ومخيفة وبشعة.. طلعت منها باستنتاج: لاحدود لداعشية الإنسان مالم تروضه الأديان أو القانون",
-            "الاسلوب اللى مكتوب بة الرواية رائع بس كقصة معجبنيش كانت مستفزة شوية بالنسبة لى :"
-            ,"الهدووووء . الهدوء والخصوصية والأجواء الرمانسيه وقت المساء. الأكل غالي نوعا ما"
+            "الاسلوب اللى مكتوب بة الرواية رائع بس كقصة معجبنيش كانت مستفزة شوية بالنسبة لى :",
+            "الهدووووء . الهدوء والخصوصية والأجواء الرمانسيه وقت المساء. الأكل غالي نوعا ما",
             "لا زلت غير مقتنع بفاروق جويدة كشاعر ...",
             )
