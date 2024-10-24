@@ -9,7 +9,7 @@ def download_model():
     file = "ABSA_checkpoints/checkpoint_1.0.tar.gz"
     file_name = "checkpoint_1.0.tar.gz"
     # Check if model file exists locally, if not, download it
-    if not os.path.exists(file):
+    if not os.path.exists(file_name):
         print("Downloading...")
         # fetch S3 Keys
         ACCESS_KEY_CA=os.environ["ACCESS_KEY_CA"]

@@ -11,10 +11,10 @@ from Examples import Examples
 @st.cache_resource
 def load_model(file_name):
     print('Loading model...')
-    Model = ATEPC.AspectExtractor(file_name)
+    Model = ATEPC(file_name)
     return Model
 def predict(input, model):
-    def filter(self, input:str):
+    def filter(input:str):
         # Regular expressions for matching hashtags, mentions, and URLs
         hashtag_pattern = r'#\w+'
         mention_pattern = r'@\w+'
