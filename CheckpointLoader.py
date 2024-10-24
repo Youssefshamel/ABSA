@@ -1,3 +1,5 @@
+import tarfile
+
 from boto3.session import Session
 from botocore.config import Config
 import os
@@ -28,7 +30,7 @@ def download_model():
     if not os.path.exists(out_file):
         print("extracting...")
         # loading the temp.zip and creating a zip object
-        with ZipFile(file_name, 'r') as zObject:
-            zObject.extractall(
-                path=out_file)
+        with tarfile.open(file_name, "r:gz") as tar:
+            tar.extractall(path=out_file)
+
     return out_file
