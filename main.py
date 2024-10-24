@@ -1,5 +1,5 @@
 import streamlit as st
-from pyabsa import AspectTermExtraction as ATEPC
+from pyabsa.tasks.AspectTermExtraction.prediction.aspect_extractor import AspectExtractor as ATEPC
 import os
 from CheckpointLoader import download_model
 from Examples import Examples
@@ -7,16 +7,16 @@ from Examples import Examples
 
 # load model
 @st.cache_resource
-def load_model():
+def load_model(file_name):
     print('Loading model...')
-    Model = ATEPC.AspectExtractor("fast_lcf_atepc_my_dataset_cdw_apcacc_83.5_apcf1_78.89_atef1_64.24")
+    Model = ATEPC.AspectExtractor(file_name)
     return Model
 
 
 # download model
-download_model()
+file_name = download_model()
 # load model
-model = load_model()
+model = load_model(file_name)
 
 # Title
 st.title("Aspect Extraction")

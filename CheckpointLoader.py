@@ -4,8 +4,10 @@ import os
 from zipfile import ZipFile
 
 def download_model():
+    file = "ABSA_checkpoints/checkpoint_1.0.tar.gz"
+    file_name = "checkpoint_1.0.tar.gz"
     # Check if model file exists locally, if not, download it
-    if not os.path.exists("ABSA_checkpoints/ABSA_checkpoint_1.0.zip"):
+    if not os.path.exists(file):
         print("Downloading...")
         # fetch S3 Keys
         ACCESS_KEY_CA=os.environ["ACCESS_KEY_CA"]
@@ -19,12 +21,14 @@ def download_model():
         data_science_bucket = s3_own.Bucket('ds.crowdanalyzer.com')
         # download model
         data_science_bucket.download_file(
-            'ABSA_checkpoints/ABSA_checkpoint_1.0.zip',
-            'ABSA_checkpoint_1.0.zip')
+            file,
+            file_name)
     # extract file
-    if not os.path.exists("fast_lcf_atepc_my_dataset_cdw_apcacc_83.5_apcf1_78.89_atef1_64.24"):
+    out_file = "checkpoint"
+    if not os.path.exists(out_file):
         print("extracting...")
         # loading the temp.zip and creating a zip object
-        with ZipFile("ABSA_checkpoint_1.0.zip", 'r') as zObject:
+        with ZipFile(file_name, 'r') as zObject:
             zObject.extractall(
-                path="")
+                path=out_file)
+    return out_file
