@@ -1,3 +1,5 @@
+import re
+
 import streamlit as st
 from pyabsa.tasks.AspectTermExtraction.prediction.aspect_extractor import AspectExtractor as ATEPC
 import os
@@ -11,7 +13,22 @@ def load_model(file_name):
     print('Loading model...')
     Model = ATEPC.AspectExtractor(file_name)
     return Model
+def predict(input, model):
+    def filter(self, input:str):
+        # Regular expressions for matching hashtags, mentions, and URLs
+        hashtag_pattern = r'#\w+'
+        mention_pattern = r'@\w+'
+        url_pattern = r'http[s]?://\S+|www\.\S+'
 
+        # Remove hashtags, mentions, and URLs from the original string
+        filtered_string = re.sub(hashtag_pattern, '', input)
+        filtered_string = re.sub(mention_pattern, '', filtered_string)
+        filtered_string = re.sub(url_pattern, '', filtered_string)
+
+        return filtered_string
+    filtered = filter(input)
+
+    return model.predict(filtered)
 
 # download model
 file_name = download_model()
@@ -36,9 +53,9 @@ run = st.button('Predict')
 
 if run:
     if not custom:
-        output = model.predict(option)
+        output = predict(option, model)
     else:
-        output = model.predict(text_input)
+        output = predict(text_input, model)
     tokens = output['tokens']
     aspects = output['aspect']
     positions = output['position']
